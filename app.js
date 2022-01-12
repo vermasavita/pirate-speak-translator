@@ -1,21 +1,21 @@
-var btnTranslate = document.querySelector("#btn-translate");
+const btnTranslate = document.querySelector("#btn-translate");
 
-var txtInput = document.querySelector("#txt-input");
-var outputDiv = document.querySelector("#output");
-var serverUrl = "https://api.funtranslations.com/translate/pirate.json";
+const txtInput = document.querySelector("#txt-input");
+const outputDiv = document.querySelector("#output");
+const serverUrl = "https://api.funtranslations.com/translate/pirate.json";
 
-function getTranslationURL(text) {
+const getTranslationURL = (text) => {
     return serverUrl + "?" + "text=" + text
 }
 
-function errorHandler(error) {
+const errorHandler = (error) => {
     console.log("error occured", error);
     alert("Something went wrong with server! try again after sometime")
 
 }
 
-function clickHandler() {
-    var inputText = txtInput.value;
+const clickHandler = () => {
+    const inputText = txtInput.value;
 
     //calling server for processing
 
